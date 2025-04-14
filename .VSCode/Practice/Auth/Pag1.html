@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Înregistrare</title>
+  <link rel="stylesheet" href="font.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Creare Cont</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="username">Nume utilizator</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresă de email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Parolă</label>
+        <input type="password" id="password" name="password" 
+        required
+        minlength="8"
+        pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}"/>
+        <button type=""  id="toggleParola" onclick="ArataParola()">Arată parola</input>
+      </div>
+
+      <button type="submit">Înregistrează-te</button>
+
+      <p class="login-link">Ai deja cont? <a href="#">Autentifică-te</a></p>
+    </form>
+  </div>
+  <script>
+    function ArataParola() {
+      var parola = document.getElementById("password");
+      if (parola.type === "password") {
+        parola.type = "text";
+      } else {
+        parola.type = "password";
+      }
+    }
+    </script>
+
+</body>
+</html>
