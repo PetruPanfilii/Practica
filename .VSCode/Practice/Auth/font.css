@@ -83,4 +83,17 @@
   .login-link a:hover {
     text-decoration: underline;
   }
+  .icon-button {
+    position: absolute;
+    right: 10px;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #313131;
+  }
+  
+  
   

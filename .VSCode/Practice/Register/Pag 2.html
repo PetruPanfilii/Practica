@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Autentificare</title>
-  <link rel="stylesheet" href="font.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../Auth/font.css" /></link>
 </head>
 <body>
 
@@ -16,14 +17,15 @@
         <input type="email" id="email" name="email" required />
       </div>
 
-      <div class="form-group">
+      <div class="form-group" style="position: relative;">
         <label for="password">Parolă</label>
         <input type="password" id="password" name="password" 
         required
         pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}"/>
-        <button type="button"  id="toggleParola" onclick="ArataParola()" style="width: 1px; top: 44%; background: none; right: 15px; position: absolute; cursor: pointer;">
+        <button type="button"  id="toggleParola" class="icon-button" onclick="ArataParola()" style="top: 30%;"> 
           <i class="fa-solid fa-eye" id="ochiIcon" style="color: rgb(49, 44, 44);"></i>
         </button>
+
 
         <button type="submit" style="margin-top: 25px;">Autentifică-te</button>
         <p class="login-link">Nu aveți? <a href="../Auth/Pag1.html">Inregistrează-te</a></p>
@@ -32,5 +34,6 @@
       </form>
       
   </div>
+  <script src="../Auth/sript.js"></script>
 </body>
 </html>
