@@ -19,12 +19,19 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#">Acasă</a></li>
       <li><a href="#">Toate Jocurile</a></li>
-      <li><a href="#">Adaugă Joc</a></li>
+      <li><a href="../Meniu/Adauga-joc.html">Adaugă Joc</a></li>
       <li><a href="#">Favorite</a></li>
-      <li><a href="#">Profil</a></li>
+      <div class="nav-right">
+        <a href="#" id="logout" title="Logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+        <a href="#" id="profile" title="Profil">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
     </ul>
   </nav>
-
+<script src="logout.js"></script>
   <script>
     const toggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');

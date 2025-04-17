@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded',() =>{
-    fetch('../Navbar/Navig.html')
+    fetch('Navbar/Navig.html')
     .then(res =>res.text())
     .then(data => document.getElementById('navbar-container').innerHTML = data);
 
