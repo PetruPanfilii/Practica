@@ -9,9 +9,10 @@ function regUser() {
       localStorage.setItem("password", password);
   
       alert("Contul a fost înregistrat cu succes!");
+       window.location.href = ""
     } else {
       alert("Te rog să completezi toate câmpurile.");
     }
   }
   
-  window.location.href = ""
+ 
