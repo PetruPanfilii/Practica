@@ -23,7 +23,7 @@ function loginUser() {
      if (user) {
        localStorage.setItem("currentUser", JSON.stringify(user)); // salvăm utilizatorul curent
        alert("Autentificare reușită!");
-       window.location.href = "../Practice/index.html";
+       window.location.href = "/Practice/Pagina-principala.html";
      } else {
        alert("Email sau parolă incorecte.");
      }

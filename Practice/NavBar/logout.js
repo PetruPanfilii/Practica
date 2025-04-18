@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (logoutBtn) {
       logoutBtn.addEventListener("click", function () {
         localStorage.clear();
-        window.location.href = "../Auth/login.html"; // ajustează calea dacă e altă structură
+        window.location.href = "/Practice/Auth/login.html"; // ajustează calea dacă e altă structură
       });
     }
   });

@@ -2,81 +2,50 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Lista Mea de Jocuri</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      background: #f2f2f2;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    input, button {
-      padding: 10px;
-      margin: 10px 0;
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      background: #fff;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .delete {
-      background: #ff4d4d;
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .delete:hover {
-      background: #e60000;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaugă Joc</title>
+  <link rel="stylesheet" href="Add-joc.css">
 </head>
 <body>
-  <h1>🎮 Lista Mea de Jocuri</h1>
-  <input type="text" id="gameInput" placeholder="Adaugă un joc nou..." />
-  <button onclick="addGame()">Adaugă Joc</button>
 
-  <ul id="gameList">
-    <!-- jocurile vor fi adăugate aici -->
-  </ul>
+  <div class="container">
+    <h1>Adaugă un joc nou</h1>
+    <form id="gameForm">
+      <div class="form-group">
+        <label for="gameName">Nume joc</label>
+        <input type="text" id="gameName" name="gameName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gameType">Genul jocului</label>
+        <select id="gameType" name="gameType" required>
+          <option value="">Selectează genul</option>
+          <option value="Acțiune">Acțiune</option>
+          <option value="Aventură">Aventură</option>
+          <option value="RPG">RPG</option>
+          <option value="Strategie">Strategie</option>
+          <option value="Simulator">Simulator</option>
+        </select>
+      </div>
+
+      <button type="submit">Adaugă Joc</button>
+    </form>
+
+    <div class="game-list" id="gameList"></div>
+  </div>
 
   <script>
-    function addGame() {
-      const input = document.getElementById("gameInput");
-      const gameName = input.value.trim();
+    document.getElementById('gameForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('gameName').value;
+      const type = document.getElementById('gameType').value;
 
-      if (gameName !== "") {
-        const li = document.createElement("li");
-        li.innerHTML = `${gameName} <button class="delete" onclick="this.parentElement.remove()">Șterge</button>`;
-        document.getElementById("gameList").appendChild(li);
-        input.value = "";
-      }
-    }
+      const newGame = `<p><strong>${name}</strong> - ${type}</p>`;
+      document.getElementById('gameList').innerHTML += newGame;
+
+      // Reset
+      this.reset();
+    });
   </script>
 </body>
 </html>

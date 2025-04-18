@@ -26,7 +26,7 @@ function regUser() {
     localStorage.setItem("users", JSON.stringify(users));
 
     alert("Contul a fost înregistrat cu succes!");
-     window.location.href = '/Practice/Pagina-principala.html'
+     window.location.href = '/Practice/Auth/Login.html'
   } else {
     alert("Te rog să completezi toate câmpurile.");
   }
