@@ -4,19 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Jocuri</title>
-  <link rel="stylesheet" href="Pagina-principala.css">
+  <link rel="stylesheet" href="/Practice/Pagina-principala.css">
   <link rel="stylesheet" href="NavBar/index.css">
   <link rel="stylesheet" href="Footer/index.css">
-  <script src="/Practice/NavBar/logout.js"></script>
+  <script defer src="Pagina-principala.js"></script>
+  
 </head>
 <body>
   <div id="navbar-container"></div>
 
   <section class="main-section">
-    <h1>Bine ați venit pe Game Game-Chasers</h1>
-    <p>Gestionează colecția ta de jocuri preferate. Adaugă jocuri, marchează-le ca favorite și explorează jocuri populare!</p>
+    <h1>Bine ați venit pe Game-Chasers</h1>
+    <p>Acest site este pentru a oferi o experiență mai plăcută fanilor de jocuri la gestionarea listelor sale de jocuri!</p>
+
+    <div class="stats">
+      <p>Jocuri în total: <span id="totalGames">0</span></p>
+    </div>
+
+    <a href="/Practice/Meniu/Adauga-joc.html" class="add-game-button">Adaugă un joc nou</a>
+
+    <div class="recommended-games">
+      <div class="game-card">
+        <img src="/Practice/Imagini/Dead-Cells.jpg" alt="Dead Cells">
+        <h3>Dead Cells</h3>
+        <p>Un rogue-lite intens cu acțiune fluidă.</p>
+      </div>
+      <div class="game-card">
+        <img src="/Practice/Imagini/Hollow-knight.jpg" alt="Hollow Knight">
+        <h3>Hollow Knight</h3>
+        <p>Explorează un regat subteran misterios.</p>
+      </div>
+      <div class="game-card">
+        <img src="/Practice/Imagini/Hotline-Miami-2.jpg" alt="Hotline Miami 2">
+        <h3>Hotline Miami 2</h3>
+        <p>Acțiune rapidă și stil retro inconfundabil.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="loadComp.js"></script>
+  <script src="/Practice/NavBar/logout.js"></script>
+ 
+
   <div id="footer-container"></div>
 
   <script src="loadComp.js"></script>
+  <script src="=/Practice/NavBar/logout.js"></script>
 </body>
 </html>

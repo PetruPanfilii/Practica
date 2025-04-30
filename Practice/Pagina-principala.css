@@ -1,70 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f4f4;
-    padding-top: 70px; /* pentru navbar fix */
-    color: #1e1e2f;
-  }
-  
-  /* Secțiune principală */
-  .main-section {
-    padding: 40px 30px;
-    background-color: #fff;
-    min-height: calc(100vh - 140px); /* înălțime adaptată pentru navbar + footer */
-  }
-  
-  .main-section h1 {
-    font-size: 2.5rem;
-    color: #1e1e2f;
-    margin-bottom: 20px;
-  }
-  
-  .main-section p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-  }
-  
- 
-  
-  .btn-primary:hover {
-    background-color: #e67e22;
-  }
-  
-  /* Secțiuni cu carduri sau conținut */
-  .grid-section {
-    margin-top: 40px;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  
-  .card {
-    background-color: #1e1e2f;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.02);
-  }
-  
-  .card h3 {
-    color: #f39c12;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  
-  
+.main-section {
+  padding: 70px;
+  text-align: center;
+}
+
+.main-section h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.stats {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.add-game-button {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.add-game-button:hover {
+  background-color: #d35400;
+}
+
+.recommended-games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.game-card {
+  width: 220px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

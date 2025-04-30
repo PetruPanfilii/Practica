@@ -1,12 +1,3 @@
-/*window.addEventListener('DOMContentLoaded',() =>{
-    fetch('Navbar/Navig.html')
-    .then(res =>res.text())
-    .then(data => document.getElementById('navbar-container').innerHTML = data);
-
-    fetch('Footer/Foot.html')
-    .then(res =>res.text())
-    .then(data => document.getElementById('footer-container').innerHTML= data);
-});*/
 window.addEventListener('DOMContentLoaded', () => {
     const navbarContainer = document.createElement('div');
     navbarContainer.id = 'navbar-container';
@@ -19,8 +10,13 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('/Practice/Navbar/Navig.html')
       .then(res => res.text())
       .then(data => navbarContainer.innerHTML = data);
-  
+
+      const script = document.createElement("script");
+      script.src = "/Practice/NavBar/logout.js";
+      
+      document.body.appendChild(script);
     fetch('/Practice/Footer/Foot.html')
       .then(res => res.text())
       .then(data => footerContainer.innerHTML = data);
   });
+  

@@ -13,12 +13,11 @@
      }
 }
 function loginUser() {
-     const email = document.getElementById("email").value;
+     const email_username = document.getElementById("email").value;
      const password = document.getElementById("password").value;
-   
      const users = JSON.parse(localStorage.getItem("users")) || [];
-   
-     const user = users.find(user => user.email === email && user.password === password);
+     
+     const user = users.find(user => (user.email === email_username || user.username=== email_username) && user.password === password);
    
      if (user) {
        localStorage.setItem("currentUser", JSON.stringify(user)); // salvăm utilizatorul curent
